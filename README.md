@@ -1,2 +1,2 @@
 # TeamSuperMarioGalaxyMidterm
-Welcome to the repofor recreating super mario galaxy
+Welcome to the repo for recreating super mario galaxy
