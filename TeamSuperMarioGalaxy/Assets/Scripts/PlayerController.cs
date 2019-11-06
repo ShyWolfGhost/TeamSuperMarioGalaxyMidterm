@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
 
         Gravity();
 
-        ForwardBackwardMovement();
+        Movement();
     }
 
     /// <summary>
@@ -89,7 +89,8 @@ public class PlayerController : MonoBehaviour
     }
 
     /// <summary>
-    /// Moves the player toward down
+    /// Checks if the player is on the ground and records how long they have
+    /// been off the ground
     /// </summary>
     private void Gravity()
     {
@@ -107,7 +108,8 @@ public class PlayerController : MonoBehaviour
     }
 
     /// <summary>
-    /// Checks inputs for forward movement and sets values to allow the player to move
+    /// Checks inputs for forward movement and sets values to allow the player
+    /// to move
     /// </summary>
     private void ForwardInputs()
     {
@@ -167,9 +169,12 @@ public class PlayerController : MonoBehaviour
     }
 
     /// <summary>
-    /// Controls both the forward and backward movement
+    /// Controls the physics movement of the player.
+    /// This includes their movement forward, backwards, and downwards from
+    /// gravity.
+    /// 
     /// </summary>
-    private void ForwardBackwardMovement()
+    private void Movement()
     {
         // Forward movement
         if (forwardTime > 0)
