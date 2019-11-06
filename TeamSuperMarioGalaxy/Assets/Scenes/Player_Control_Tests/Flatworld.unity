@@ -507,29 +507,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveTarget: {fileID: 1515688694}
   raycastOriginOffset: {x: 0, y: 0, z: 0}
-  raycastDist: 3
+  raycastDist: 10
   up: {x: 0, y: 1, z: 0}
   fallTime: 0
   timeToMaxFall: 1
-  maxFallSpeed: 9
+  maxFallSpeed: 20
   fallCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0
@@ -537,6 +537,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   gravityCheckDist: 1.001
+  jumpForce: 10
   maxForwardSpeed: 7.5
   timeToMaxForward: 0.5
   forwardCurve:
@@ -668,8 +669,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2051097881}
-  m_LocalRotation: {x: 0.20236002, y: 0, z: 0, w: 0.9793113}
-  m_LocalPosition: {x: 0, y: 6.14, z: -7.71}
+  m_LocalRotation: {x: 0.20236002, y: -0, z: -0, w: 0.9793113}
+  m_LocalPosition: {x: 0, y: 13.639999, z: -7.71}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

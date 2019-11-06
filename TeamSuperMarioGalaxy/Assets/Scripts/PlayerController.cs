@@ -18,6 +18,12 @@ public class PlayerController : MonoBehaviour
     public AnimationCurve fallCurve;
     public float gravityCheckDist;
 
+    [Header("Jump")]
+    private bool jumpingSecond;
+    public float jumpForce;
+    private bool jumpDisable = false;
+    private bool offGroundCheck = false;
+
     [Header("Forward Movement Values")]
     public float maxForwardSpeed;
     public float timeToMaxForward;
@@ -45,6 +51,8 @@ public class PlayerController : MonoBehaviour
         ForwardInputs();
 
         TurningInputs();
+
+        Debug.Log(jumpDisable + " " + offGroundCheck);
     }
 
     private void FixedUpdate()
@@ -67,7 +75,6 @@ public class PlayerController : MonoBehaviour
         RaycastHit hit;
         if(Physics.Raycast(ray, out hit, raycastDist))
         {
-            Debug.Log("Found Up");
             up = hit.normal;
         }
 
@@ -98,11 +105,16 @@ public class PlayerController : MonoBehaviour
         RaycastHit hit;
         if(Physics.Raycast(ray, out hit, gravityCheckDist))
         {
-            Debug.Log("On ground");
             fallTime = 0;
+            if (offGroundCheck && !Input.GetKey(KeyCode.Space))
+            {
+                jumpDisable = false;
+                offGroundCheck = false;
+            }
         }
         else
         {
+            offGroundCheck = true;
             fallTime += Time.deltaTime;
         }
     }
@@ -187,7 +199,20 @@ public class PlayerController : MonoBehaviour
             moveTarget.localPosition = new Vector3(0,
                                                    -maxFallSpeed * fallCurve.Evaluate(fallTime / timeToMaxFall),
                                                    maxForwardSpeed * forwardCurve.Evaluate(forwardTime / timeToMaxForward)) * Time.deltaTime;
-
+            if (Input.GetKey(KeyCode.Space) && !jumpDisable)
+            {
+                moveTarget.Translate(0, jumpForce * Time.deltaTime, 0);
+            }
+            else if (((!Input.GetKey(KeyCode.Space) && !jumpDisable) || (jumpForce < maxFallSpeed * fallCurve.Evaluate(fallTime / timeToMaxFall) && !jumpDisable)) && offGroundCheck)
+            {
+                jumpDisable = true;
+                if (jumpForce > maxFallSpeed * fallCurve.Evaluate(fallTime / timeToMaxFall))
+                    fallTime = 0;
+            }
+            else if(jumpForce < maxFallSpeed * fallCurve.Evaluate(fallTime/ timeToMaxFall) && jumpDisable)
+            {
+                moveTarget.Translate(0, jumpForce * Time.deltaTime, 0);
+            }
             rb.MovePosition(moveTarget.position);
         }
         // Backward movement
@@ -198,19 +223,45 @@ public class PlayerController : MonoBehaviour
              * The Y is gravity so it's based on how long the player has been falling
              * The Z is forward so it's based on how long the key has been pressed
              */
-            moveTarget.localPosition = new Vector3(0,
+            moveTarget.localPosition =new Vector3(0,
                                                    -maxFallSpeed * fallCurve.Evaluate(fallTime / timeToMaxFall),
                                                    -maxBackwardSpeed * backwardCurve.Evaluate(-forwardTime / timeToMaxBackward)) * Time.deltaTime;
-
+            if(Input.GetKey(KeyCode.Space) && !jumpDisable)
+            {
+                moveTarget.Translate(0, jumpForce * Time.deltaTime, 0);
+            }
+            else if(((!Input.GetKey(KeyCode.Space) && !jumpDisable) || (jumpForce < maxFallSpeed * fallCurve.Evaluate(fallTime / timeToMaxFall) && !jumpDisable)) && offGroundCheck)
+            {
+                jumpDisable = true;
+                if(jumpForce > maxFallSpeed * fallCurve.Evaluate(fallTime / timeToMaxFall))
+                    fallTime = 0;
+            }
+            else if (jumpForce < maxFallSpeed * fallCurve.Evaluate(fallTime / timeToMaxFall) && jumpDisable)
+            {
+                moveTarget.Translate(0, jumpForce * Time.deltaTime, 0);
+            }
             rb.MovePosition(moveTarget.position);
         }
         else
         {
-            if (fallTime > 0)
+            moveTarget.localPosition = new Vector3(0,
+                                                    -maxFallSpeed * fallCurve.Evaluate(fallTime / timeToMaxFall),
+                                                    0) * Time.deltaTime;
+            if (Input.GetKey(KeyCode.Space) && !jumpDisable)
             {
-                moveTarget.localPosition += -up * maxFallSpeed * fallCurve.Evaluate(fallTime / timeToMaxFall) * Time.deltaTime;
-                rb.MovePosition(moveTarget.position);
+                moveTarget.Translate(0, jumpForce * Time.deltaTime, 0);
             }
+            else if (((!Input.GetKey(KeyCode.Space) && !jumpDisable) || (jumpForce < maxFallSpeed * fallCurve.Evaluate(fallTime / timeToMaxFall) && !jumpDisable)) && offGroundCheck)
+            {
+                jumpDisable = true;
+                if (jumpForce > maxFallSpeed * fallCurve.Evaluate(fallTime / timeToMaxFall))
+                    fallTime = 0;
+            }
+            else if (jumpForce < maxFallSpeed * fallCurve.Evaluate(fallTime / timeToMaxFall) && jumpDisable)
+            {
+                moveTarget.Translate(0, jumpForce * Time.deltaTime, 0);
+            }
+            rb.MovePosition(moveTarget.position);
 
         }
     }
