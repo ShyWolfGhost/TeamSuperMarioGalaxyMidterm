@@ -15,6 +15,8 @@ public class MenuControl : MonoBehaviour
     public AudioClip Clippy;
 
     public float soundTimer;
+
+    public bool startedPlaying;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,12 +28,16 @@ public class MenuControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (startedPlaying == true && Source.isPlaying == false)
+        {
+            SceneManager.LoadScene("USEABLE STARTING WORLD");
+        } 
     }
 
     void TaskOnClick()
     {
         Source.PlayOneShot(Clippy);
+        startedPlaying = true;
         //StartCoroutine(DelaySceneLoad());
         
         /*IEnumerator DelaySceneLoad()
