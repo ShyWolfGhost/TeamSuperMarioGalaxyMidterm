@@ -3,16 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="afe63b45-f895-4e19-a974-f5e217dea56c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TeamSuperMarioGalaxy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TeamSuperMarioGalaxy/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/7RainyTonedTown.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/7RainyTonedTown.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/?????.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/?????.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MenuScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MenuScreen.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Noms.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Noms.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ui Scripts/ScriptButton.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ui Scripts/ScriptButton.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ui Scripts/MenuControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ui Scripts/MenuControl.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,17 +16,18 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Ui Scripts/MenuControl.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="40" column="11" lean-forward="true" selection-start-line="40" selection-start-column="11" selection-end-line="40" selection-end-column="11" />
+            <state relative-caret-position="314">
+              <caret line="42" column="38" lean-forward="true" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
               <folding>
-                <marker date="1573055636777" expanded="true" signature="6:185" ph="..." />
-                <marker date="1573055636777" expanded="true" signature="227:1360" ph="{...}" />
-                <marker date="1573055636777" expanded="true" signature="417:568" ph="{...}" />
-                <marker date="1573055636777" expanded="true" signature="626:647" ph="{...}" />
-                <marker date="1573055636777" expanded="true" signature="671:1273" ph="{...}" />
-                <marker date="1573055636777" expanded="true" signature="775:940" ph="/* IEnumerator DelaySceneLoad() ... */" />
-                <marker date="1573055636777" expanded="true" signature="1078:1182" ph="/* if (soundTimer&lt;0) ... */" />
-                <marker date="1573055636777" expanded="true" signature="1278:1358" ph="/* void SoundTimerCountDown() ... */" />
+                <marker date="1573057209910" expanded="true" signature="6:185" ph="..." />
+                <marker date="1573057209910" expanded="true" signature="227:1563" ph="{...}" />
+                <marker date="1573057209910" expanded="true" signature="450:601" ph="{...}" />
+                <marker date="1573057209910" expanded="true" signature="659:819" ph="{...}" />
+                <marker date="1573057209910" expanded="true" signature="730:812" ph="{...}" />
+                <marker date="1573057209910" expanded="true" signature="843:1476" ph="{...}" />
+                <marker date="1573057209910" expanded="true" signature="978:1143" ph="/* IEnumerator DelaySceneLoad() ... */" />
+                <marker date="1573057209910" expanded="true" signature="1281:1385" ph="/* if (soundTimer&lt;0) ... */" />
+                <marker date="1573057209910" expanded="true" signature="1481:1561" ph="/* void SoundTimerCountDown() ... */" />
               </folding>
             </state>
           </provider>
@@ -59,7 +51,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="47" />
     <option name="y" value="23" />
     <option name="width" value="1329" />
@@ -141,12 +133,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1573052732046</updated>
-      <workItem from="1573052738269" duration="2793000" />
+      <workItem from="1573052738269" duration="3220000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2793000" />
+    <option name="totallyTimeSpent" value="3220000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -159,7 +151,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="47" y="23" width="1329" height="829" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24941725" />
@@ -210,17 +201,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Ui Scripts/MenuControl.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="40" column="11" lean-forward="true" selection-start-line="40" selection-start-column="11" selection-end-line="40" selection-end-column="11" />
+        <state relative-caret-position="314">
+          <caret line="42" column="38" lean-forward="true" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
           <folding>
-            <marker date="1573055636777" expanded="true" signature="6:185" ph="..." />
-            <marker date="1573055636777" expanded="true" signature="227:1360" ph="{...}" />
-            <marker date="1573055636777" expanded="true" signature="417:568" ph="{...}" />
-            <marker date="1573055636777" expanded="true" signature="626:647" ph="{...}" />
-            <marker date="1573055636777" expanded="true" signature="671:1273" ph="{...}" />
-            <marker date="1573055636777" expanded="true" signature="775:940" ph="/* IEnumerator DelaySceneLoad() ... */" />
-            <marker date="1573055636777" expanded="true" signature="1078:1182" ph="/* if (soundTimer&lt;0) ... */" />
-            <marker date="1573055636777" expanded="true" signature="1278:1358" ph="/* void SoundTimerCountDown() ... */" />
+            <marker date="1573057209910" expanded="true" signature="6:185" ph="..." />
+            <marker date="1573057209910" expanded="true" signature="227:1563" ph="{...}" />
+            <marker date="1573057209910" expanded="true" signature="450:601" ph="{...}" />
+            <marker date="1573057209910" expanded="true" signature="659:819" ph="{...}" />
+            <marker date="1573057209910" expanded="true" signature="730:812" ph="{...}" />
+            <marker date="1573057209910" expanded="true" signature="843:1476" ph="{...}" />
+            <marker date="1573057209910" expanded="true" signature="978:1143" ph="/* IEnumerator DelaySceneLoad() ... */" />
+            <marker date="1573057209910" expanded="true" signature="1281:1385" ph="/* if (soundTimer&lt;0) ... */" />
+            <marker date="1573057209910" expanded="true" signature="1481:1561" ph="/* void SoundTimerCountDown() ... */" />
           </folding>
         </state>
       </provider>
