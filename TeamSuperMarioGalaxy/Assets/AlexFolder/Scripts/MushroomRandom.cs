@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class MushroomOne : MonoBehaviour
+public class MushroomRandom : MonoBehaviour
 {
     //this is the AI part in class
     NavMeshAgent thisAgent;
@@ -46,11 +46,6 @@ public class MushroomOne : MonoBehaviour
 
         thisAgent.destination = wayPoints[currentWayPoints].position;
 
-        currentWayPoints = currentWayPoints + 1;
-        
-        if(currentWayPoints >= wayPoints.Length)
-        {
-            currentWayPoints = 0;
-        }
+        currentWayPoints = Random.Range(0, (wayPoints.Length - 1));
     }
 }
