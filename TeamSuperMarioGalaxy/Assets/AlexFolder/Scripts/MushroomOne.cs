@@ -23,8 +23,7 @@ public class MushroomOne : MonoBehaviour
 
     void Update()
     {
-        if (Vector3.Distance(player.transform.position, transform.position) <= detectDist)
-            detectPlayer = true;
+            detectPlayer = Vector3.Distance(player.transform.position, transform.position) <= detectDist;
 
         if (!detectPlayer)//if the enemy doesn't detect the player, it moves between two points
         {
