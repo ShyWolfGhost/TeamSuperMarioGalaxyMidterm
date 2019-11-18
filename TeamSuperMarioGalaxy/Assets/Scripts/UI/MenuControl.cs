@@ -30,7 +30,7 @@ public class MenuControl : MonoBehaviour
     {
         if (startedPlaying == true && Source.isPlaying == false)
         {
-            SceneManager.LoadScene("USEABLE STARTING WORLD");
+            SceneManager.LoadScene("Flatworld");
         } 
     }
 
