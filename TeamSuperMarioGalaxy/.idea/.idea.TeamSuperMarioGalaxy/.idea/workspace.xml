@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="afe63b45-f895-4e19-a974-f5e217dea56c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TeamSuperMarioGalaxy/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TeamSuperMarioGalaxy/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TeamSuperMarioGalaxy/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TeamSuperMarioGalaxy/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TeamSuperMarioGalaxy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TeamSuperMarioGalaxy/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AlexFolder/Models.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/USEABLE STARTING WORLD.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/USEABLE STARTING WORLD.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MenuControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MenuControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/RadialAiNotes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/RadialAiNotes.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,8 +17,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/UI/MenuControl.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="40" column="43" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
+            <state>
               <folding>
                 <marker date="1574096117080" expanded="true" signature="6:187" ph="..." />
                 <marker date="1574096117080" expanded="true" signature="229:1552" ph="{...}" />
@@ -42,13 +36,26 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/UI/RadialAiNotes.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="144">
+              <caret line="9" column="42" lean-forward="true" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
               <folding>
-                <marker date="1574098063758" expanded="true" signature="6:100" ph="..." />
-                <marker date="1574098063758" expanded="true" signature="144:905" ph="{...}" />
-                <marker date="1574098063758" expanded="true" signature="151:745" ph="/* Radial Ui Life stuff ... */" />
-                <marker date="1574098063758" expanded="true" signature="755:903" ph="/* public Int health; ... */" />
+                <marker date="1574271735749" expanded="true" signature="6:171" ph="..." />
+                <marker date="1574271735749" expanded="true" signature="216:2653" ph="{...}" />
+                <marker date="1574271735749" expanded="true" signature="367:455" ph="/* public Animation state3; ... */" />
+                <marker date="1574271735749" expanded="true" signature="509:750" ph="{...}" />
+                <marker date="1574271735749" expanded="true" signature="606:735" ph="/* state1 = GetComponent&lt;Animation&gt;(); ... */" />
+                <marker date="1574271735749" expanded="true" signature="768:1897" ph="{...}" />
+                <marker date="1574271735749" expanded="true" signature="783:931" ph="/* ON player collide with enemy WHICH I WON'T BE ABLE TO ACCESS HEALTH GOES DOWN 1 ... */" />
+                <marker date="1574271735749" expanded="true" signature="960:1292" ph="{...}" />
+                <marker date="1574271735749" expanded="true" signature="1001:1137" ph="/* code ... */" />
+                <marker date="1574271735749" expanded="true" signature="1321:1537" ph="{...}" />
+                <marker date="1574271735749" expanded="true" signature="1344:1418" ph="/* code ... */" />
+                <marker date="1574271735749" expanded="true" signature="1566:1760" ph="{...}" />
+                <marker date="1574271735749" expanded="true" signature="1589:1655" ph="/* code ... */" />
+                <marker date="1574271735749" expanded="true" signature="1789:1891" ph="{...}" />
+                <marker date="1574271735749" expanded="true" signature="1812:1881" ph="/* code ... */" />
+                <marker date="1574271735749" expanded="true" signature="1903:2497" ph="/* Radial Ui Life stuff ... */" />
+                <marker date="1574271735749" expanded="true" signature="2503:2651" ph="/* public Int health; ... */" />
               </folding>
             </state>
           </provider>
@@ -75,7 +82,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="41" />
+    <option name="x" value="71" />
     <option name="y" value="23" />
     <option name="width" value="1329" />
     <option name="height" value="829" />
@@ -89,10 +96,10 @@
         <option name="show-hidden-items" value="false" />
         <option name="show-project-names" value="true" />
       </pane>
+      <pane id="FileSystemExplorer" />
       <pane id="SolutionExplorer">
         <option name="show-all-files" value="false" />
       </pane>
-      <pane id="FileSystemExplorer" />
       <pane id="AssemblyExplorer" />
     </panes>
   </component>
@@ -145,11 +152,12 @@
       <workItem from="1573052738269" duration="3220000" />
       <workItem from="1574038447604" duration="2000" />
       <workItem from="1574096065789" duration="1671000" />
+      <workItem from="1574263416003" duration="6263000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4893000" />
+    <option name="totallyTimeSpent" value="11156000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -161,9 +169,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="41" y="23" width="1329" height="829" extended-state="0" />
+    <frame x="71" y="23" width="1329" height="829" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25641027" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26029527" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -202,8 +211,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/UI/MenuControl.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="40" column="43" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
+        <state>
           <folding>
             <marker date="1574096117080" expanded="true" signature="6:187" ph="..." />
             <marker date="1574096117080" expanded="true" signature="229:1552" ph="{...}" />
@@ -220,13 +228,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/UI/RadialAiNotes.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="144">
+          <caret line="9" column="42" lean-forward="true" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
           <folding>
-            <marker date="1574098063758" expanded="true" signature="6:100" ph="..." />
-            <marker date="1574098063758" expanded="true" signature="144:905" ph="{...}" />
-            <marker date="1574098063758" expanded="true" signature="151:745" ph="/* Radial Ui Life stuff ... */" />
-            <marker date="1574098063758" expanded="true" signature="755:903" ph="/* public Int health; ... */" />
+            <marker date="1574271735749" expanded="true" signature="6:171" ph="..." />
+            <marker date="1574271735749" expanded="true" signature="216:2653" ph="{...}" />
+            <marker date="1574271735749" expanded="true" signature="367:455" ph="/* public Animation state3; ... */" />
+            <marker date="1574271735749" expanded="true" signature="509:750" ph="{...}" />
+            <marker date="1574271735749" expanded="true" signature="606:735" ph="/* state1 = GetComponent&lt;Animation&gt;(); ... */" />
+            <marker date="1574271735749" expanded="true" signature="768:1897" ph="{...}" />
+            <marker date="1574271735749" expanded="true" signature="783:931" ph="/* ON player collide with enemy WHICH I WON'T BE ABLE TO ACCESS HEALTH GOES DOWN 1 ... */" />
+            <marker date="1574271735749" expanded="true" signature="960:1292" ph="{...}" />
+            <marker date="1574271735749" expanded="true" signature="1001:1137" ph="/* code ... */" />
+            <marker date="1574271735749" expanded="true" signature="1321:1537" ph="{...}" />
+            <marker date="1574271735749" expanded="true" signature="1344:1418" ph="/* code ... */" />
+            <marker date="1574271735749" expanded="true" signature="1566:1760" ph="{...}" />
+            <marker date="1574271735749" expanded="true" signature="1589:1655" ph="/* code ... */" />
+            <marker date="1574271735749" expanded="true" signature="1789:1891" ph="{...}" />
+            <marker date="1574271735749" expanded="true" signature="1812:1881" ph="/* code ... */" />
+            <marker date="1574271735749" expanded="true" signature="1903:2497" ph="/* Radial Ui Life stuff ... */" />
+            <marker date="1574271735749" expanded="true" signature="2503:2651" ph="/* public Int health; ... */" />
           </folding>
         </state>
       </provider>
