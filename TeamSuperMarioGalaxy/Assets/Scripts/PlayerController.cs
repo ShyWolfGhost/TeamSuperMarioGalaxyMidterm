@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
     private float forwardTime;
 
     private List<Vector3> ups;
-    private int directionMemory = 100;
+    private int directionMemory = 20;
     private Vector3 avgUp()
     {
         Vector3 a = new Vector3();
@@ -184,8 +184,8 @@ public class PlayerController : MonoBehaviour
     private void FindUp()
     {
         Ray ray = new Ray();
-        if (ups == null)
-            ray = new Ray(transform.position, -up * raycastDist);
+        if(ups == null)
+            ray = new Ray(transform.position , -up * raycastDist);
         else
             ray = new Ray(transform.position, -avgUp() * raycastDist);
         // Debug.DrawRay(r.origin,r.direction);
