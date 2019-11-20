@@ -4,7 +4,19 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public enum State { NORMAL, DISABLED, HURT, SPINNING };
+    public State state;
+
     public Transform moveTarget;
+
+    [Header("Jump")]
+    public bool onGround;
+    public float groundCheckDist;
+    public float maxJumpTime;
+    public float jumpTimer;
+    public enum JumpState { ON_GROUND, JUMPING, FALLING };
+    public JumpState jumpState;
+    public AnimationCurve jumpCurve;
 
     [Header("Down Raycasting")]
     public Vector3 raycastOriginOffset;
@@ -17,12 +29,6 @@ public class PlayerController : MonoBehaviour
     public float maxFallSpeed;
     public AnimationCurve fallCurve;
     public float gravityCheckDist;
-
-    [Header("Jump")]
-    private bool jumpingSecond;
-    public float jumpForce;
-    private bool jumpDisable = false;
-    private bool offGroundCheck = false;
 
     [Header("Forward Movement Values")]
     public float maxForwardSpeed;
@@ -52,7 +58,7 @@ public class PlayerController : MonoBehaviour
 
         TurningInputs();
 
-        Debug.Log(jumpDisable + " " + offGroundCheck);
+        JumpInput();
     }
 
     private void FixedUpdate()
@@ -62,6 +68,69 @@ public class PlayerController : MonoBehaviour
         Gravity();
 
         Movement();
+    }
+
+    void VertMove()
+    {
+        // Reset all transform data
+        moveTarget.localPosition = Vector3.zero;
+        moveTarget.localRotation = Quaternion.identity;
+        if (jumpState == JumpState.JUMPING)
+        {
+            float movement = jumpCurve.Evaluate(jumpTimer / maxJumpTime) * Time.deltaTime;
+
+            moveTarget.Translate(0, movement, 0);
+
+            rb.MovePosition(moveTarget.position);
+        }
+        else if(jumpState == JumpState.FALLING)
+        {
+            float movement = fallCurve.Evaluate(fallTime / timeToMaxFall) * -maxFallSpeed * Time.deltaTime;
+
+            moveTarget.Translate(0, movement, 0);
+
+            rb.MovePosition(moveTarget.position);
+        }
+    }
+
+    /// <summary>
+    /// Handles the inputs for jumping.
+    /// If you press space while on the ground you'll start jumping.
+    /// </summary>
+    void JumpInput()
+    {
+        // If you're on the ground and press the spacebar you start jumping
+        if(jumpState == JumpState.ON_GROUND && Input.GetKeyDown(KeyCode.Space))
+        {
+            jumpTimer = 0f;
+            jumpState = JumpState.JUMPING;
+        }
+        // If at any point you are jumping and stop holding space you start falling
+        else if(jumpState == JumpState.JUMPING && !Input.GetKey(KeyCode.Space))
+        {
+            jumpState = JumpState.FALLING;
+            fallTime = 0f;
+        }
+        // If you are jumping for too long you stop jumping
+        else if(jumpState == JumpState.JUMPING && jumpTimer > maxJumpTime)
+        {
+            jumpState = JumpState.FALLING;
+            fallTime = 0f;
+        }
+        // If you're still jumping just increase the timer;
+        else if(jumpState == JumpState.JUMPING && jumpTimer < maxJumpTime)
+        {
+            jumpTimer += Time.deltaTime;
+        }
+        else if(!onGround && jumpState == JumpState.ON_GROUND)
+        {
+            jumpState = JumpState.FALLING;
+            fallTime = 0f;
+        }
+        else if(onGround)
+        {
+            jumpState = JumpState.ON_GROUND;
+        }
     }
 
     /// <summary>
@@ -107,16 +176,19 @@ public class PlayerController : MonoBehaviour
         if(Physics.Raycast(ray, out hit, gravityCheckDist))
         {
             fallTime = 0;
-            if (offGroundCheck && !Input.GetKey(KeyCode.Space))
-            {
-                jumpDisable = false;
-                offGroundCheck = false;
-            }
+        }
+        else if(jumpState != JumpState.JUMPING)
+        {
+            fallTime += Time.deltaTime;
+        }
+
+        if(Physics.Raycast(ray, out hit, groundCheckDist))
+        {
+            onGround = true;
         }
         else
         {
-            offGroundCheck = true;
-            fallTime += Time.deltaTime;
+            onGround = false;
         }
     }
 
@@ -189,6 +261,8 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     private void Movement()
     {
+        VertMove();
+
         // Forward movement
         if (forwardTime > 0)
         {
@@ -197,23 +271,7 @@ public class PlayerController : MonoBehaviour
              * The Y is gravity so it's based on how long the player has been falling
              * The Z is forward so it's based on how long the key has been pressed
              */
-            moveTarget.localPosition = new Vector3(0,
-                                                   -maxFallSpeed * fallCurve.Evaluate(fallTime / timeToMaxFall),
-                                                   maxForwardSpeed * forwardCurve.Evaluate(forwardTime / timeToMaxForward)) * Time.deltaTime;
-            if (Input.GetKey(KeyCode.Space) && !jumpDisable)
-            {
-                moveTarget.Translate(0, jumpForce * Time.deltaTime, 0);
-            }
-            else if (((!Input.GetKey(KeyCode.Space) && !jumpDisable) || (jumpForce < maxFallSpeed * fallCurve.Evaluate(fallTime / timeToMaxFall) && !jumpDisable)) && offGroundCheck)
-            {
-                jumpDisable = true;
-                if (jumpForce > maxFallSpeed * fallCurve.Evaluate(fallTime / timeToMaxFall))
-                    fallTime = 0;
-            }
-            else if(jumpForce < maxFallSpeed * fallCurve.Evaluate(fallTime/ timeToMaxFall) && jumpDisable)
-            {
-                moveTarget.Translate(0, jumpForce * Time.deltaTime, 0);
-            }
+            moveTarget.Translate(0,0, maxForwardSpeed * forwardCurve.Evaluate(forwardTime / timeToMaxForward) * Time.deltaTime );
             rb.MovePosition(moveTarget.position);
         }
         // Backward movement
@@ -224,46 +282,9 @@ public class PlayerController : MonoBehaviour
              * The Y is gravity so it's based on how long the player has been falling
              * The Z is forward so it's based on how long the key has been pressed
              */
-            moveTarget.localPosition =new Vector3(0,
-                                                   -maxFallSpeed * fallCurve.Evaluate(fallTime / timeToMaxFall),
-                                                   -maxBackwardSpeed * backwardCurve.Evaluate(-forwardTime / timeToMaxBackward)) * Time.deltaTime;
-            if(Input.GetKey(KeyCode.Space) && !jumpDisable)
-            {
-                moveTarget.Translate(0, jumpForce * Time.deltaTime, 0);
-            }
-            else if(((!Input.GetKey(KeyCode.Space) && !jumpDisable) || (jumpForce < maxFallSpeed * fallCurve.Evaluate(fallTime / timeToMaxFall) && !jumpDisable)) && offGroundCheck)
-            {
-                jumpDisable = true;
-                if(jumpForce > maxFallSpeed * fallCurve.Evaluate(fallTime / timeToMaxFall))
-                    fallTime = 0;
-            }
-            else if (jumpForce < maxFallSpeed * fallCurve.Evaluate(fallTime / timeToMaxFall) && jumpDisable)
-            {
-                moveTarget.Translate(0, jumpForce * Time.deltaTime, 0);
-            }
+            moveTarget.Translate(0,0,-maxBackwardSpeed * backwardCurve.Evaluate(-forwardTime / timeToMaxBackward) * Time.deltaTime);
+            
             rb.MovePosition(moveTarget.position);
-        }
-        else
-        {
-            moveTarget.localPosition = new Vector3(0,
-                                                    -maxFallSpeed * fallCurve.Evaluate(fallTime / timeToMaxFall),
-                                                    0) * Time.deltaTime;
-            if (Input.GetKey(KeyCode.Space) && !jumpDisable)
-            {
-                moveTarget.Translate(0, jumpForce * Time.deltaTime, 0);
-            }
-            else if (((!Input.GetKey(KeyCode.Space) && !jumpDisable) || (jumpForce < maxFallSpeed * fallCurve.Evaluate(fallTime / timeToMaxFall) && !jumpDisable)) && offGroundCheck)
-            {
-                jumpDisable = true;
-                if (jumpForce > maxFallSpeed * fallCurve.Evaluate(fallTime / timeToMaxFall))
-                    fallTime = 0;
-            }
-            else if (jumpForce < maxFallSpeed * fallCurve.Evaluate(fallTime / timeToMaxFall) && jumpDisable)
-            {
-                moveTarget.Translate(0, jumpForce * Time.deltaTime, 0);
-            }
-            rb.MovePosition(moveTarget.position);
-
         }
     }
 }
