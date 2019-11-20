@@ -38,13 +38,13 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571334, b: 0.3069219, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 1
+  m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -1223,32 +1223,32 @@ PrefabInstance:
     - target: {fileID: -3568417543252636071, guid: aac37e2aaa3c94de0b6123bc8fceb7c0,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.00001
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -3568417543252636071, guid: aac37e2aaa3c94de0b6123bc8fceb7c0,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.00001
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -3568417543252636071, guid: aac37e2aaa3c94de0b6123bc8fceb7c0,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.00001
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9026910868627447404, guid: aac37e2aaa3c94de0b6123bc8fceb7c0,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.00001
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9026910868627447404, guid: aac37e2aaa3c94de0b6123bc8fceb7c0,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.00001
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9026910868627447404, guid: aac37e2aaa3c94de0b6123bc8fceb7c0,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.00001
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -1954994810338183141, guid: aac37e2aaa3c94de0b6123bc8fceb7c0,
         type: 3}
@@ -1256,6 +1256,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4515964320245540142, guid: aac37e2aaa3c94de0b6123bc8fceb7c0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7820697276523638473, guid: aac37e2aaa3c94de0b6123bc8fceb7c0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5249605696670686459, guid: aac37e2aaa3c94de0b6123bc8fceb7c0,
         type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -1800,6 +1810,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1775375864}
+  - component: {fileID: 1775375867}
   - component: {fileID: 1775375866}
   - component: {fileID: 1775375863}
   - component: {fileID: 1775375862}
@@ -1919,7 +1930,7 @@ MonoBehaviour:
   state: 0
   moveTarget: {fileID: 1515688694}
   onGround: 1
-  groundCheckDist: 1.05
+  groundCheckDist: 1.1
   maxJumpTime: 0.375
   jumpTimer: 0
   jumpState: 0
@@ -1957,7 +1968,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   raycastOriginOffset: {x: 0, y: 0, z: 0}
-  raycastDist: 10
+  raycastDist: 5
   up: {x: 0, y: 1, z: 0}
   fallTime: 0
   timeToMaxFall: 1
@@ -2022,7 +2033,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  maxBackwardSpeed: 3
+  maxBackwardSpeed: 7.5
   timeToMaxBackward: 0.5
   backwardCurve:
     serializedVersion: 2
@@ -2051,6 +2062,27 @@ MonoBehaviour:
   rotationSpeed: 90
   directionChangeMultiplier: 3
   movementDecayMultiplier: 2
+  hurtMove: 5
+  hurtTime: 1
+--- !u!114 &1775375867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775375860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87749d17a03264aed9ece102e450af53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 0
+  mans: 0
+  starbits: 0
+  coins: 0
+  invulnerable: 0
+  invulnTime: 3
+  flashMultiplier: 20
 --- !u!1001 &2043249945
 PrefabInstance:
   m_ObjectHideFlags: 0
