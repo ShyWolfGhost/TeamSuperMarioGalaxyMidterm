@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1391681995078931761}
   - component: {fileID: 1391681995078931760}
   - component: {fileID: 1391681995078931759}
-  - component: {fileID: 1391681995078931758}
   - component: {fileID: 1391681995078931757}
   m_Layer: 0
   m_Name: ENE_Mushroom (2)
@@ -57,7 +56,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4134b76734d84f4ba33c9091153b07b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 966463405406721463, guid: 14cbf7d090ff97e46be356d515c448e1, type: 3}
   wayPoints:
   - {fileID: 0}
   - {fileID: 0}
@@ -73,7 +72,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1391681995078931756}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -113,26 +112,10 @@ BoxCollider:
   m_GameObject: {fileID: 1391681995078931756}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1391681995078931758
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1391681995078931756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0b0b63b4c8a3284b8180e1eace65f34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  wayPoints: []
-  currentWayPoints: 0
-  detectDist: 3
 --- !u!195 &1391681995078931757
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -214,7 +197,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2d4dc3e128be7cb438cb6a4e4ffae327, type: 2}
+  - {fileID: 2100000, guid: 872768c8d836afa4dad607e18c5a2eab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
