@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class PiranhaPlant : MonoBehaviour
 {
-    public Transform Player;//Assign player to this transform so that the plant can look at the player.
-
+    public GameObject mainObj, player;
+    bool detectPlayer = false;
+    public float detectDist;
+    // Start is called before the first frame update
     void Start()
     {
         
     }
 
+    // Update is called once per frame
     void Update()
     {
-        transform.LookAt(new Vector3(Player.position.x, transform.position.y, Player.position.z), Vector3.left);
+        mainObj.transform.LookAt(player.transform);
+
+        if (Vector3.Distance(player.transform.position, transform.position) <= detectDist)
+            detectPlayer = true;
+
+        if (detectPlayer)//if the enemy doesn't detect the player, it moves between two points
+        {
+            //this should be attack
+        }
     }
 }

@@ -75,7 +75,8 @@ public class PlayerController : MonoBehaviour
         RaycastHit hit;
         if(Physics.Raycast(ray, out hit, raycastDist))
         {
-            up = hit.normal;
+            if(hit.collider.tag == "Ground")
+                up = hit.normal;
         }
 
         up = up.normalized;
