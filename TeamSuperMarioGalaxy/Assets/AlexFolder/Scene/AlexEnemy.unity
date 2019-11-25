@@ -1212,6 +1212,11 @@ PrefabInstance:
       propertyPath: targetObj
       value: 
       objectReference: {fileID: 1814913245}
+    - target: {fileID: 3893414812859499993, guid: 4b0bbc5fc92338c488731b0abdea2731,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1814913245}
     - target: {fileID: 2939560378492800473, guid: 4b0bbc5fc92338c488731b0abdea2731,
         type: 3}
       propertyPath: m_Name
