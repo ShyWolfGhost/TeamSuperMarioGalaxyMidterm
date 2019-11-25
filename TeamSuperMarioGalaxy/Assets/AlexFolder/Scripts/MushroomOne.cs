@@ -8,6 +8,8 @@ public class MushroomOne : MonoBehaviour
     //this is the AI part in class
     NavMeshAgent thisAgent;
     public GameObject player;
+    [Header("GetKilled")]
+    public float detectBeJumpedDist;
     [Header("AI")]
     public Transform[] wayPoints;
     public int currentWayPoints = 0;
@@ -46,8 +48,8 @@ public class MushroomOne : MonoBehaviour
         thisAgent.destination = wayPoints[currentWayPoints].position;
 
         currentWayPoints = currentWayPoints + 1;
-        
-        if(currentWayPoints >= wayPoints.Length)
+
+        if (currentWayPoints >= wayPoints.Length)
         {
             currentWayPoints = 0;
         }

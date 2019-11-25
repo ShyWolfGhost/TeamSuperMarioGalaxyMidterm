@@ -1057,7 +1057,7 @@ PrefabInstance:
     - target: {fileID: 966463405406721419, guid: 14cbf7d090ff97e46be356d515c448e1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.524
+      value: -15.298
       objectReference: {fileID: 0}
     - target: {fileID: 966463405406721419, guid: 14cbf7d090ff97e46be356d515c448e1,
         type: 3}
@@ -1200,6 +1200,90 @@ PrefabInstance:
       objectReference: {fileID: 2107687705}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f748d0bf1551f53479000cc5b42b0925, type: 3}
+--- !u!1001 &3447569080924384872
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3893414812859499993, guid: 4b0bbc5fc92338c488731b0abdea2731,
+        type: 3}
+      propertyPath: targetObj
+      value: 
+      objectReference: {fileID: 1814913245}
+    - target: {fileID: 3893414812859499993, guid: 4b0bbc5fc92338c488731b0abdea2731,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1814913245}
+    - target: {fileID: 2939560378492800473, guid: 4b0bbc5fc92338c488731b0abdea2731,
+        type: 3}
+      propertyPath: m_Name
+      value: Piranha Plant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8505708656305746816, guid: 4b0bbc5fc92338c488731b0abdea2731,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8505708656305746816, guid: 4b0bbc5fc92338c488731b0abdea2731,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.88492
+      objectReference: {fileID: 0}
+    - target: {fileID: 8505708656305746816, guid: 4b0bbc5fc92338c488731b0abdea2731,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -13.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8505708656305746816, guid: 4b0bbc5fc92338c488731b0abdea2731,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8505708656305746816, guid: 4b0bbc5fc92338c488731b0abdea2731,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8505708656305746816, guid: 4b0bbc5fc92338c488731b0abdea2731,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8505708656305746816, guid: 4b0bbc5fc92338c488731b0abdea2731,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8505708656305746816, guid: 4b0bbc5fc92338c488731b0abdea2731,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8505708656305746816, guid: 4b0bbc5fc92338c488731b0abdea2731,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8505708656305746816, guid: 4b0bbc5fc92338c488731b0abdea2731,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8505708656305746816, guid: 4b0bbc5fc92338c488731b0abdea2731,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1268351131751058151, guid: 4b0bbc5fc92338c488731b0abdea2731,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4b0bbc5fc92338c488731b0abdea2731, type: 3}
 --- !u!1001 &6351402514253025281
 PrefabInstance:
   m_ObjectHideFlags: 0
