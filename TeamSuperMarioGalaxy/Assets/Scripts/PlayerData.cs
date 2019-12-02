@@ -52,6 +52,8 @@ public class PlayerData : MonoBehaviour
             life--;
             cont.hurtRoutine = StartCoroutine(cont.Hurt(collision.collider.transform));
             invulnRoutine = StartCoroutine(Invuln());
+
+            collision.collider.transform.parent.GetComponent<MushroomOne>().Wait();
         }
     }
 
