@@ -27,15 +27,15 @@ public class PlayerData : MonoBehaviour
     {
         if (invulnerable)
         {
-            Debug.Log(Mathf.Sin(Time.time * flashMultiplier) > 0);
+            // Debug.Log(Mathf.Sin(Time.time * flashMultiplier) > 0);
             if (Mathf.Sin(Time.time * flashMultiplier) > 0)
             {
-                Debug.Log("Invis");
+                // Debug.Log("Invis");
                 rend.enabled = false;
             }
             else
             {
-                Debug.Log("Vis");
+                // Debug.Log("Vis");
                 rend.enabled = true;
             }
         }
