@@ -8,12 +8,16 @@
           <e p="Scripts" t="Include">
             <e p="MushroomOne.cs" t="Include" />
             <e p="MushroomRandom.cs" t="Include" />
+            <e p="PiranhaPlant.cs" t="Include" />
             <e p="RotatingScript.cs" t="Include" />
+            <e p="TestPlayerScript.cs" t="Include" />
           </e>
         </e>
+        <e p="CollectCoin.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="GenericCameraFollow.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
+          <e p="PlayerData.cs" t="Include" />
           <e p="UI" t="Include">
             <e p="MenuControl.cs" t="Include" />
             <e p="RadialAiNotes.cs" t="Include" />

@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
     [Header("Other Movement Values")]
     public float directionChangeMultiplier;
     public float movementDecayMultiplier;
-
+    
     [Header("Hurt Values")]
     public float hurtMove;
     public float hurtTime;
@@ -370,4 +370,6 @@ public class PlayerController : MonoBehaviour
             rb.MovePosition(moveTarget.position);
         }
     }
+
+    
 }
