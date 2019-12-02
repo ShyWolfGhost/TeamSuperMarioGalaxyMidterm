@@ -27,15 +27,15 @@ public class PlayerData : MonoBehaviour
     {
         if (invulnerable)
         {
-            Debug.Log(Mathf.Sin(Time.time * flashMultiplier) > 0);
+            // Debug.Log(Mathf.Sin(Time.time * flashMultiplier) > 0);
             if (Mathf.Sin(Time.time * flashMultiplier) > 0)
             {
-                Debug.Log("Invis");
+                // Debug.Log("Invis");
                 rend.enabled = false;
             }
             else
             {
-                Debug.Log("Vis");
+                // Debug.Log("Vis");
                 rend.enabled = true;
             }
         }
@@ -52,6 +52,8 @@ public class PlayerData : MonoBehaviour
             life--;
             cont.hurtRoutine = StartCoroutine(cont.Hurt(collision.collider.transform));
             invulnRoutine = StartCoroutine(Invuln());
+
+            collision.collider.transform.parent.GetComponent<MushroomOne>().Wait();
         }
     }
 

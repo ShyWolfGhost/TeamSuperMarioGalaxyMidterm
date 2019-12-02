@@ -45,16 +45,10 @@ public class PlayerController : MonoBehaviour
     [Header("Other Movement Values")]
     public float directionChangeMultiplier;
     public float movementDecayMultiplier;
-
-<<<<<<< HEAD
-
     
-    
-=======
     [Header("Hurt Values")]
     public float hurtMove;
     public float hurtTime;
->>>>>>> 7ef61a2d1c68b1b9cd6194063e04b856f4bb59ca
 
     private Rigidbody rb;
     private float forwardTime;
@@ -72,9 +66,13 @@ public class PlayerController : MonoBehaviour
         return a;
     }
 
+    private Animator anim;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        anim = GetComponentInChildren<Animator>();
     }
 
     private void Update()
@@ -84,6 +82,8 @@ public class PlayerController : MonoBehaviour
         TurningInputs();
 
         JumpInput();
+
+        anim.SetBool("Running", forwardTime > 0f);
     }
 
     private void FixedUpdate()
@@ -148,23 +148,27 @@ public class PlayerController : MonoBehaviour
         // If you're on the ground and press the spacebar you start jumping
         if (jumpState == JumpState.ON_GROUND && Input.GetKeyDown(KeyCode.Space) && (state == State.NORMAL || state == State.SPINNING))
         {
+            anim.SetBool("Jump", true);
             jumpTimer = 0f;
             jumpState = JumpState.JUMPING;
         }
         else if (jumpState == JumpState.JUMPING && state == State.HURT)
         {
+            anim.SetBool("Jump", true);
             jumpState = JumpState.FALLING;
             fallTime = 0f;
         }
         // If at any point you are jumping and stop holding space you start falling
         else if (jumpState == JumpState.JUMPING && !Input.GetKey(KeyCode.Space))
         {
+            anim.SetBool("Jump", true);
             jumpState = JumpState.FALLING;
             fallTime = 0f;
         }
         // If you are jumping for too long you stop jumping
         else if (jumpState == JumpState.JUMPING && jumpTimer > maxJumpTime)
         {
+            anim.SetBool("Jump", true);
             jumpState = JumpState.FALLING;
             fallTime = 0f;
         }
@@ -175,11 +179,13 @@ public class PlayerController : MonoBehaviour
         }
         else if (!onGround && jumpState == JumpState.ON_GROUND)
         {
+            anim.SetBool("Jump", true);
             jumpState = JumpState.FALLING;
             fallTime = 0f;
         }
         else if (onGround)
         {
+            anim.SetBool("Jump", false);
             jumpState = JumpState.ON_GROUND;
         }
     }

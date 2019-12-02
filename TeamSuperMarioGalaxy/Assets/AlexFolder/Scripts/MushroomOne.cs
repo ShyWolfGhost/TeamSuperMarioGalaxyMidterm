@@ -17,6 +17,9 @@ public class MushroomOne : MonoBehaviour
 
     bool detectPlayer = false;//change the way of moving to chase the player
 
+    private float waitTimer;
+    public float waitTime;
+
     void Start()
     {
         thisAgent = GetComponent<NavMeshAgent>();
@@ -25,10 +28,13 @@ public class MushroomOne : MonoBehaviour
 
     void Update()
     {
-            detectPlayer = Vector3.Distance(player.transform.position, transform.position) <= detectDist;
+        // Debug.Log(waitTimer);
+
+        detectPlayer = Vector3.Distance(player.transform.position, transform.position) <= detectDist;
 
         if (!detectPlayer)//if the enemy doesn't detect the player, it moves between two points
         {
+            thisAgent.isStopped = false;
             if (thisAgent.remainingDistance < .1f)//number still needs to adjust
             {
                 GoToNextPoint();
@@ -36,8 +42,17 @@ public class MushroomOne : MonoBehaviour
         }
         else
         {
-            thisAgent.destination = player.transform.position;//this should be attack instead of move closer
+            if (waitTimer <= 0f)
+            {
+                thisAgent.isStopped = false;
+                thisAgent.destination = player.transform.position;//this should be attack instead of move closer
+            }
+            else
+            {
+                thisAgent.isStopped = true;
+            }
         }
+        waitTimer -= Time.deltaTime;
     }
 
     void GoToNextPoint()
@@ -53,5 +68,10 @@ public class MushroomOne : MonoBehaviour
         {
             currentWayPoints = 0;
         }
+    }
+
+    public void Wait()
+    {
+        waitTimer = waitTime;
     }
 }
