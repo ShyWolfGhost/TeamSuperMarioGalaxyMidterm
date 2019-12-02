@@ -8,7 +8,9 @@
           <e p="Scripts" t="Include">
             <e p="MushroomOne.cs" t="Include" />
             <e p="MushroomRandom.cs" t="Include" />
+            <e p="PiranhaPlant.cs" t="Include" />
             <e p="RotatingScript.cs" t="Include" />
+            <e p="TestPlayerScript.cs" t="Include" />
           </e>
         </e>
         <e p="Scripts" t="Include">

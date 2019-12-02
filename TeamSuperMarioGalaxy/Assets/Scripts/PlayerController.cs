@@ -38,6 +38,10 @@ public class PlayerController : MonoBehaviour
     public float directionChangeMultiplier;
     public float movementDecayMultiplier;
 
+
+    
+    
+
     private Rigidbody rb;
     private float forwardTime;
 
@@ -266,4 +270,6 @@ public class PlayerController : MonoBehaviour
 
         }
     }
+
+    
 }
