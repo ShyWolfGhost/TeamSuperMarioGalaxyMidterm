@@ -622,6 +622,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 570072311}
   m_PrefabAsset: {fileID: 0}
+--- !u!137 &623426352 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7780734103960978560, guid: 01318cc758c7f4b289e3dba311849887,
+    type: 3}
+  m_PrefabInstance: {fileID: 1610573151}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &661646026
 GameObject:
   m_ObjectHideFlags: 0
@@ -902,6 +908,12 @@ MonoBehaviour:
   camera: {fileID: 2051097884}
   positionLerpValue: 0.1
   rotationLerpValue: 0.1
+--- !u!137 &1325775875 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 5840255483787996955, guid: 01318cc758c7f4b289e3dba311849887,
+    type: 3}
+  m_PrefabInstance: {fileID: 1610573151}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1377206562
 GameObject:
   m_ObjectHideFlags: 0
@@ -1374,16 +1386,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Model
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 01318cc758c7f4b289e3dba311849887,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: fb5559eda230e474a9d1ea7b8bed28a2, type: 2}
     - target: {fileID: -4425609515867240179, guid: 01318cc758c7f4b289e3dba311849887,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 01318cc758c7f4b289e3dba311849887,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: fb5559eda230e474a9d1ea7b8bed28a2, type: 2}
     - target: {fileID: -4216859302048453862, guid: 01318cc758c7f4b289e3dba311849887,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1453,6 +1465,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5840255483787996955, guid: 01318cc758c7f4b289e3dba311849887,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01318cc758c7f4b289e3dba311849887, type: 3}
@@ -1736,6 +1753,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87749d17a03264aed9ece102e450af53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend:
+  - {fileID: 623426352}
+  - {fileID: 1325775875}
   life: 3
   mans: 3
   starbits: 0

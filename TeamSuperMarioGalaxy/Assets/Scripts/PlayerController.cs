@@ -84,6 +84,7 @@ public class PlayerController : MonoBehaviour
         JumpInput();
 
         anim.SetBool("Running", forwardTime > 0f);
+        anim.SetBool("WalkingBack", forwardTime < 0f);
     }
 
     private void FixedUpdate()

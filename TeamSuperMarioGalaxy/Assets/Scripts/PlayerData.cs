@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerData : MonoBehaviour
 {
     private PlayerController cont;
-    private MeshRenderer rend;
+    public List<Renderer> rend;
     public int life;
     public int mans;
     public int starbits;
@@ -19,8 +19,9 @@ public class PlayerData : MonoBehaviour
 
     void Start()
     {
+        Application.targetFrameRate = 60;
+
         cont = GetComponent<PlayerController>();
-        rend = GetComponent<MeshRenderer>();
     }
 
     void Update()
@@ -31,17 +32,26 @@ public class PlayerData : MonoBehaviour
             if (Mathf.Sin(Time.time * flashMultiplier) > 0)
             {
                 // Debug.Log("Invis");
-                rend.enabled = false;
+                foreach(Renderer mesh in rend)
+                {
+                    mesh.enabled = false;
+                }
             }
             else
             {
                 // Debug.Log("Vis");
-                rend.enabled = true;
+                foreach (Renderer mesh in rend)
+                {
+                    mesh.enabled = true;
+                }
             }
         }
         else
         {
-            rend.enabled = true;
+            foreach (Renderer mesh in rend)
+            {
+                mesh.enabled = true;
+            }
         }
     }
 
