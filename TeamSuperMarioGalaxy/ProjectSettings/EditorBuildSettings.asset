@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/USEABLE STARTING WORLD.unity
     guid: 4b70a1c3e0b074672aa61d500494b1b8
+  - enabled: 1
+    path: Assets/Scenes/Player_Control_Tests/Flatworld.unity
+    guid: 98176aac04ba940fea58634ac365b6a6
   m_configObjects: {}

@@ -12,6 +12,7 @@ public class MushroomRandom : MonoBehaviour
     public Transform[] wayPoints;
     public int currentWayPoints = 0;
     public float detectDist = 3f;//Change this to adjust the distance the enemy detects the player
+    public float newSpeed = 5f;
 
     bool detectPlayer = false;//change the way of moving to chase the player
 
@@ -36,6 +37,7 @@ public class MushroomRandom : MonoBehaviour
         else
         {
             thisAgent.destination = player.transform.position;//this should be attack instead of move closer
+            thisAgent.speed = newSpeed;
         }
     }
 
