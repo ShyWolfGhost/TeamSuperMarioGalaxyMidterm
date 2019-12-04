@@ -21,6 +21,7 @@ public class RadialAiNotes : MonoBehaviour
     //public Animation state2;
     //public Animation state1;
     public Animator healthAnimator;
+    //public Image playerHead;
 
     
     /*
@@ -83,6 +84,7 @@ public class RadialAiNotes : MonoBehaviour
         {
             //code
             //reset the value to 3 than cause a loss of mario.
+            //player.GetComponent<PlayerData>().IfLifeZero();
         }
     }
 
