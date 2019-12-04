@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerData : MonoBehaviour
 {
@@ -60,6 +61,11 @@ public class PlayerData : MonoBehaviour
         if(collision.collider.tag == "Enemy" && !invulnerable)
         {
             life--;
+            /*if (life == 0)
+            {
+                IfLifeZero();  
+            }*/
+            
             cont.hurtRoutine = StartCoroutine(cont.Hurt(collision.collider.transform));
             invulnRoutine = StartCoroutine(Invuln());
 
@@ -92,6 +98,10 @@ public class PlayerData : MonoBehaviour
     /*public void IfLifeZero()
     {
         mans--;
+        if (mans == 0)
+        {
+            SceneManager.LoadScene( )//Load the menu scene or a You died try again scene
+        }
     }
     //This is a script Taylor Can draw from
     //so ui can change either text or number of playerheads on screen
