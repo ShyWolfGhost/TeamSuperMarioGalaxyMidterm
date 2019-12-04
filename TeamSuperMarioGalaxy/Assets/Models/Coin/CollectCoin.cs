@@ -26,6 +26,7 @@ public class CollectCoin : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         player.GetComponent<PlayerData>().coins=player.GetComponent<PlayerData>().coins+1;
+        Debug.Log("Sucesss Coin");
         Source.PlayOneShot(IAM);
         
     }

@@ -11,18 +11,35 @@ public class RadialAiNotes : MonoBehaviour
 {
 
     public GameObject healthPanel;
+    
     public Image healthPanelImage;
-    public int healthNumb;
+
+    public GameObject player;
+    //public int healthNumb;
     public TextMeshProUGUI displayHealthNumb;
     //public Animation state3;
     //public Animation state2;
     //public Animation state1;
     public Animator healthAnimator;
 
+    
+    /*
+     * player.GetComponent<PlayerData>().life = the pannel
+     * player.GetComponent<PlayerData>().mans = the player heads
+     * 
+     */
+    
+    
+    
+    
+    
+    
+    
     void Start()
     {
+        player.GetComponent<PlayerData>();
         //Image healthPanelImage = GetComponent<Image>();
-        healthNumb = 3;
+        
         //state1 = GetComponent<Animation>();
         //state2 = GetComponent<Animation>();
         //state3 = GetComponent<Animation>();
@@ -33,7 +50,7 @@ public class RadialAiNotes : MonoBehaviour
         //ON player collide with enemy WHICH I WON'T BE ABLE TO ACCESS HEALTH GOES DOWN 1
         
         //displayHealthNumb.text = healthNumb.ToString();
-        if (healthNumb == 3)
+        if (player.GetComponent<PlayerData>().life == 3)
                  {
                      //code
                      //healthPanel.fill
@@ -44,7 +61,7 @@ public class RadialAiNotes : MonoBehaviour
                      
 
                  }
-        if (healthNumb == 2)
+        if (player.GetComponent<PlayerData>().life == 2)
         {
             //code
             //0.66666666666
@@ -54,7 +71,7 @@ public class RadialAiNotes : MonoBehaviour
             
 
         }
-        if (healthNumb == 1)
+        if (player.GetComponent<PlayerData>().life == 1)
         {
             //code
             //0.3333333333333
@@ -62,7 +79,7 @@ public class RadialAiNotes : MonoBehaviour
             healthAnimator.SetTrigger("GoToState1");
             displayHealthNumb.text = "1";
         }
-        if (healthNumb == 0)
+        if (player.GetComponent<PlayerData>().life == 0)
         {
             //code
             //reset the value to 3 than cause a loss of mario.

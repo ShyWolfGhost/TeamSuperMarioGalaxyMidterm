@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerData : MonoBehaviour
 {
     private PlayerController cont;
-    private MeshRenderer rend;
+    private Renderer rend;
     public int life;
     public int mans;
     public int starbits;
@@ -20,7 +20,7 @@ public class PlayerData : MonoBehaviour
     void Start()
     {
         cont = GetComponent<PlayerController>();
-        rend = GetComponent<MeshRenderer>();
+        rend = GetComponentInChildren<Renderer>();
     }
 
     void Update()
