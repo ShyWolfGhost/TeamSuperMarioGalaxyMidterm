@@ -21,7 +21,10 @@ public class RadialAiNotes : MonoBehaviour
     //public Animation state2;
     //public Animation state1;
     public Animator healthAnimator;
+    //public Image playerHead;
 
+
+    private int lastCheckHealth;
     
     /*
      * player.GetComponent<PlayerData>().life = the pannel
@@ -38,6 +41,7 @@ public class RadialAiNotes : MonoBehaviour
     void Start()
     {
         player.GetComponent<PlayerData>();
+        lastCheckHealth = player.GetComponent<PlayerData>().life;
         //Image healthPanelImage = GetComponent<Image>();
         
         //state1 = GetComponent<Animation>();
@@ -50,7 +54,7 @@ public class RadialAiNotes : MonoBehaviour
         //ON player collide with enemy WHICH I WON'T BE ABLE TO ACCESS HEALTH GOES DOWN 1
         
         //displayHealthNumb.text = healthNumb.ToString();
-        if (player.GetComponent<PlayerData>().life == 3)
+        if (player.GetComponent<PlayerData>().life == 3 && player.GetComponent<PlayerData>().life != lastCheckHealth)
                  {
                      //code
                      //healthPanel.fill
@@ -61,7 +65,7 @@ public class RadialAiNotes : MonoBehaviour
                      
 
                  }
-        if (player.GetComponent<PlayerData>().life == 2)
+        if (player.GetComponent<PlayerData>().life == 2 && player.GetComponent<PlayerData>().life != lastCheckHealth)
         {
             //code
             //0.66666666666
@@ -71,7 +75,7 @@ public class RadialAiNotes : MonoBehaviour
             
 
         }
-        if (player.GetComponent<PlayerData>().life == 1)
+        if (player.GetComponent<PlayerData>().life == 1 && player.GetComponent<PlayerData>().life != lastCheckHealth)
         {
             //code
             //0.3333333333333
@@ -83,7 +87,9 @@ public class RadialAiNotes : MonoBehaviour
         {
             //code
             //reset the value to 3 than cause a loss of mario.
+            //player.GetComponent<PlayerData>().IfLifeZero();
         }
+        lastCheckHealth = player.GetComponent<PlayerData>().life;
     }
 
     //Radial Ui Life stuff
