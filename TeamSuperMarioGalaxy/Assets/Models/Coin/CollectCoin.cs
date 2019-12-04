@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CollectCoin : MonoBehaviour
 {
     public GameObject player;
     public AudioClip IAM;
     public AudioSource Source;
+    public TextMeshProUGUI coinText;
 
 
 
@@ -25,9 +28,11 @@ public class CollectCoin : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        player.GetComponent<PlayerData>().coins=player.GetComponent<PlayerData>().coins+1;
+        player.GetComponent<PlayerData>().GetCoin();
+        coinText.text = player.GetComponent<PlayerData>().coins.ToString();
         Debug.Log("Sucesss Coin");
         Source.PlayOneShot(IAM);
-        
+        Destroy(gameObject);
+
     }
 }

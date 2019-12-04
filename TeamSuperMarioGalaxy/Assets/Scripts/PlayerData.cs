@@ -81,10 +81,20 @@ public class PlayerData : MonoBehaviour
         {
             coins -= 100;
             mans++;
+            //if player gets 100 coins 1 up
         }
     }
     public void GetStarbit()
     {
         starbits++;
     }
+
+    /*public void IfLifeZero()
+    {
+        mans--;
+    }
+    //This is a script Taylor Can draw from
+    //so ui can change either text or number of playerheads on screen
+    //they aren't sure yet
+    */
 }
