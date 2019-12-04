@@ -19,13 +19,14 @@ public class GenericCameraFollow : MonoBehaviour
         camera.rotation = transform.rotation;
     }
 
-    void Update()
+    void LateUpdate()
     {
         camera.position = Vector3.Lerp(camera.position, transform.position, positionLerpValue);
         camera.rotation = Quaternion.Lerp(camera.rotation, transform.rotation, rotationLerpValue);
     }
 }
 
+#if UNITY_EDITOR
 [CustomEditor(typeof(GenericCameraFollow))]
 public class CameraFollowDrawer : Editor
 {
@@ -44,3 +45,4 @@ public class CameraFollowDrawer : Editor
         }
     }
 }
+#endif

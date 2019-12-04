@@ -19,8 +19,6 @@ public class PlayerData : MonoBehaviour
 
     void Start()
     {
-        Application.targetFrameRate = 60;
-
         cont = GetComponent<PlayerController>();
     }
 
