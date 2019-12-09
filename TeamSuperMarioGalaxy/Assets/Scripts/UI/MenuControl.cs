@@ -36,24 +36,32 @@ public class MenuControl : MonoBehaviour
 
     void TaskOnClick()
     {
-        Source.PlayOneShot(Clippy);
-        startedPlaying = true;
-        //StartCoroutine(DelaySceneLoad());
-        
-        /*IEnumerator DelaySceneLoad()
+        if(Source.isPlaying== false)
+                 {Source.PlayOneShot(Clippy);
+                     startedPlaying = true;
+                     //StartCoroutine(DelaySceneLoad());
+                 
+                     /*IEnumerator DelaySceneLoad()
+                     {
+                         yield return new WaitForSeconds(1.0f);
+                         SceneManager.LoadScene("USEABLE STARTING WORLD");
+                     }*/
+                     //InvokeRepeating("SoundTimerCountDown", Time.deltaTime, Time.deltaTime);
+                     Debug.Log("soundTimer: "+ soundTimer);
+                     /*if (soundTimer<0)
+                     {
+                         SceneManager.LoadScene("USEABLE STARTING WORLD");
+             
+                     }*/
+                 
+                     Debug.Log("Play Sound; Disable the physical object; Change Scene");
+                     
+                 }
+        if(Source.isPlaying== true)
         {
-            yield return new WaitForSeconds(1.0f);
-            SceneManager.LoadScene("USEABLE STARTING WORLD");
-        }*/
-        //InvokeRepeating("SoundTimerCountDown", Time.deltaTime, Time.deltaTime);
-        Debug.Log("soundTimer: "+ soundTimer);
-        /*if (soundTimer<0)
-        {
-            SceneManager.LoadScene("USEABLE STARTING WORLD");
-
-        }*/
+            Debug.Log("You Thought....LMFAO");
+        }
         
-        Debug.Log("Play Sound; Disable the physical object; Change Scene");
     }
     /*void SoundTimerCountDown()
     {
