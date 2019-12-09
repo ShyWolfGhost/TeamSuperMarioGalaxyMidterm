@@ -2280,7 +2280,7 @@ GameObject:
   - component: {fileID: 6001786128083461955}
   m_Layer: 0
   m_Name: Plane.007
-  m_TagString: Ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2505,7 +2505,7 @@ GameObject:
   - component: {fileID: 374491243255399588}
   m_Layer: 0
   m_Name: Plane.006
-  m_TagString: Ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
