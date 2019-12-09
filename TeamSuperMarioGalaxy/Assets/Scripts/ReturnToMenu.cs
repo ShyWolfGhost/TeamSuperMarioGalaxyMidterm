@@ -35,24 +35,31 @@ public class ReturnToMenu : MonoBehaviour
 
     void TaskOnClick()
     {
-        Sourceend.PlayOneShot(Clippy);
-        startedPlaying = true;
-        //StartCoroutine(DelaySceneLoad());
-        
-        /*IEnumerator DelaySceneLoad()
+        if (Sourceend.isPlaying == false)
         {
-            yield return new WaitForSeconds(1.0f);
-            SceneManager.LoadScene("USEABLE STARTING WORLD");
-        }*/
-        //InvokeRepeating("SoundTimerCountDown", Time.deltaTime, Time.deltaTime);
-        Debug.Log("soundTimer: "+ soundTimer);
-        /*if (soundTimer<0)
-        {
-            SceneManager.LoadScene("USEABLE STARTING WORLD");
+            Sourceend.PlayOneShot(Clippy);
+            startedPlaying = true;
+            //StartCoroutine(DelaySceneLoad());
 
-        }*/
-        
-        Debug.Log("Play Sound; Disable the physical object; Change Scene");
+            /*IEnumerator DelaySceneLoad()
+            {
+                yield return new WaitForSeconds(1.0f);
+                SceneManager.LoadScene("USEABLE STARTING WORLD");
+            }*/
+            //InvokeRepeating("SoundTimerCountDown", Time.deltaTime, Time.deltaTime);
+            Debug.Log("soundTimer: " + soundTimer);
+            /*if (soundTimer<0)
+            {
+                SceneManager.LoadScene("USEABLE STARTING WORLD");
+    
+            }*/
+
+            Debug.Log("Play Sound; Disable the physical object; Change Scene");
+        }
+        if(Sourceend.isPlaying== true)
+        {
+            Debug.Log("You Thought....LMFAO");
+        }
     }
     /*void SoundTimerCountDown()
     {

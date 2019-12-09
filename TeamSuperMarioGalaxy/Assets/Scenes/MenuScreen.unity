@@ -266,7 +266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Coward: {fileID: 1864634884}
   Source: {fileID: 1480036447}
-  Clippy: {fileID: 8300000, guid: eed13286b181f4938afe4c305527e4b3, type: 3}
+  Clippy: {fileID: 8300000, guid: b965bec05a0e14a198b6d37ba8c20186, type: 3}
   soundTimer: 0
   startedPlaying: 0
 --- !u!1 &969033773
@@ -743,8 +743,8 @@ Camera:
   m_GameObject: {fileID: 1246156005}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
