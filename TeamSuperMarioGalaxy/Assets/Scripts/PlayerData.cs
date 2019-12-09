@@ -68,7 +68,12 @@ public class PlayerData : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if(collision.collider.tag == "Enemy" && !invulnerable)
+        if(collision.collider.tag == "Enemy" && cont.jumpState == PlayerController.JumpState.FALLING)
+        {
+            Destroy(collision.collider.transform.parent.parent.gameObject);
+            GetCoin();
+        }
+        else if(collision.collider.tag == "Enemy" && !invulnerable)
         {
             life--;
             /*if (life == 0)
