@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - Coin
   - Starbit
+  - Signpost
   layers:
   - Default
   - TransparentFX

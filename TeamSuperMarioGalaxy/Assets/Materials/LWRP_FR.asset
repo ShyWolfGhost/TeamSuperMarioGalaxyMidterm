@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: sobelOutlines
   m_EditorClassIdentifier: 
   settings:
-    Event: 350
+    Event: 400
     blitMaterial: {fileID: 2100000, guid: 9d6e3f65aa6370544b4c58a7a3a1b495, type: 2}
     blitMaterialPassIndex: 0
     destination: 0
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settings:
     passTag: NewRenderObjects
-    Event: 350
+    Event: 400
     filterSettings:
       RenderQueueType: 0
       LayerMask:
