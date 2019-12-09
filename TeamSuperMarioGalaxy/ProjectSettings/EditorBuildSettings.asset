@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Player_Control_Tests/Flatworld.unity
     guid: 98176aac04ba940fea58634ac365b6a6
+  - enabled: 1
+    path: Assets/Scenes/YouLose.unity
+    guid: 2c042e857ed8d44529af872238d457c2
   m_configObjects: {}
