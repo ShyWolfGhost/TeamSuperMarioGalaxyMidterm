@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class PlayerData : MonoBehaviour
 {
@@ -18,15 +20,17 @@ public class PlayerData : MonoBehaviour
 
     public Coroutine invulnRoutine;
 
+    public TextMeshProUGUI coinsText, livesText;
+
     void Start()
     {
-        Application.targetFrameRate = 60;
-
         cont = GetComponent<PlayerController>();
     }
 
     void Update()
     {
+        UpdateUI();
+
         if (invulnerable)
         {
             // Debug.Log(Mathf.Sin(Time.time * flashMultiplier) > 0);
@@ -56,6 +60,12 @@ public class PlayerData : MonoBehaviour
         }
     }
 
+    void UpdateUI()
+    {
+        livesText.text = "LIVES x " + mans;
+        coinsText.text = "x " + coins;
+    }
+
     void OnCollisionEnter(Collision collision)
     {
         if(collision.collider.tag == "Enemy" && !invulnerable)
@@ -83,6 +93,10 @@ public class PlayerData : MonoBehaviour
     public void GetCoin()
     {
         coins++;
+        if(life < 3)
+        {
+            life++;
+        }
         while(coins >= 100)
         {
             coins -= 100;
