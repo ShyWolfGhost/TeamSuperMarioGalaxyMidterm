@@ -17,9 +17,7 @@ public class CollectCoin : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player");
-        Source = GameObject.Find("AUDIO SOURCE FOR TEST COIN COLLECTION DELETE LATER").GetComponent<AudioSource>();
-        coinText = GameObject.Find("CoinsText").GetComponent<TextMeshProUGUI>();
+        player.GetComponent<PlayerData>();
     }
 
     // Update is called once per frame
@@ -31,10 +29,12 @@ public class CollectCoin : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         player.GetComponent<PlayerData>().GetCoin();
-        coinText.text = "x " + player.GetComponent<PlayerData>().coins.ToString();
+        coinText.text = player.GetComponent<PlayerData>().coins.ToString();
+        
+        //coinText = ToString(player.GetComponent<PlayerData>().coins.);
         Debug.Log("Sucesss Coin");
         Source.PlayOneShot(IAM);
         Destroy(gameObject);
-
+        
     }
 }
