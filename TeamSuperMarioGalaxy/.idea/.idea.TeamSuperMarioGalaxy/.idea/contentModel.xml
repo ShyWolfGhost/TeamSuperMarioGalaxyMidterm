@@ -13,16 +13,22 @@
             <e p="TestPlayerScript.cs" t="Include" />
           </e>
         </e>
+        <e p="Materials" t="Include">
+          <e p="SobelFilter.shader" t="Include" />
+          <e p="ToonBasicOutline.shader" t="Include" />
+        </e>
         <e p="Models" t="Include">
           <e p="Coin" t="Include">
             <e p="CollectCoin.cs" t="Include" />
           </e>
         </e>
-        <e p="ReturnToMenu.cs" t="Include" />
         <e p="Scripts" t="Include">
+          <e p="Blit.cs" t="Include" />
+          <e p="BlitPass.cs" t="Include" />
           <e p="GenericCameraFollow.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
           <e p="PlayerData.cs" t="Include" />
+          <e p="ReturnToMenu.cs" t="Include" />
           <e p="UI" t="Include">
             <e p="MenuControl.cs" t="Include" />
             <e p="RadialAiNotes.cs" t="Include" />
