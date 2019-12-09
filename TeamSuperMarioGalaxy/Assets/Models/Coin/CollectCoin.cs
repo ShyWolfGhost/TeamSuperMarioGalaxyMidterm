@@ -17,6 +17,7 @@ public class CollectCoin : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("Player");
+		Source = GameObject.Find("Coin_Sound_Source").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
