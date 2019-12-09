@@ -18,6 +18,7 @@
             <e p="CollectCoin.cs" t="Include" />
           </e>
         </e>
+        <e p="ReturnToMenu.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="GenericCameraFollow.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
