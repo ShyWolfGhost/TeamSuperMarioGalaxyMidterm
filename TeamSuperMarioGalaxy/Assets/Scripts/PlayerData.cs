@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class PlayerData : MonoBehaviour
 {
@@ -17,15 +20,17 @@ public class PlayerData : MonoBehaviour
 
     public Coroutine invulnRoutine;
 
+    public TextMeshProUGUI coinsText, livesText;
+
     void Start()
     {
-        Application.targetFrameRate = 60;
-
         cont = GetComponent<PlayerController>();
     }
 
     void Update()
     {
+        UpdateUI();
+
         if (invulnerable)
         {
             // Debug.Log(Mathf.Sin(Time.time * flashMultiplier) > 0);
@@ -55,11 +60,22 @@ public class PlayerData : MonoBehaviour
         }
     }
 
+    void UpdateUI()
+    {
+        livesText.text = "LIVES x " + mans;
+        coinsText.text = "x " + coins;
+    }
+
     void OnCollisionEnter(Collision collision)
     {
         if(collision.collider.tag == "Enemy" && !invulnerable)
         {
             life--;
+            /*if (life == 0)
+            {
+                IfLifeZero();  
+            }*/
+            
             cont.hurtRoutine = StartCoroutine(cont.Hurt(collision.collider.transform));
             invulnRoutine = StartCoroutine(Invuln());
 
@@ -77,6 +93,10 @@ public class PlayerData : MonoBehaviour
     public void GetCoin()
     {
         coins++;
+        if(life < 3)
+        {
+            life++;
+        }
         while(coins >= 100)
         {
             coins -= 100;
@@ -92,6 +112,10 @@ public class PlayerData : MonoBehaviour
     /*public void IfLifeZero()
     {
         mans--;
+        if (mans == 0)
+        {
+            SceneManager.LoadScene( )//Load the menu scene or a You died try again scene
+        }
     }
     //This is a script Taylor Can draw from
     //so ui can change either text or number of playerheads on screen
