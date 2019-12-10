@@ -3,21 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="afe63b45-f895-4e19-a974-f5e217dea56c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TeamSuperMarioGalaxy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TeamSuperMarioGalaxy/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/CoinCollect.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/CoinCollect/00_CoincollectNoise.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/CoinCollect/00_CoincollectNoise.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/CoinCollect/01_CoincollectNoise.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/CoinCollect/01_CoincollectNoise.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Jump.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Jump/01_jump.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Jump/01_jump.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Startbutton.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Startbutton/01_StartButton.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Startbutton/01_StartButton.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Player_Control_Tests/Flatworld.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Player_Control_Tests/Flatworld.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/YouLose.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/YouLose.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/RadialAiNotes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/RadialAiNotes.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,7 +15,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/UI/MenuControl.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
+            <state relative-caret-position="832">
               <caret line="62" column="9" selection-start-line="59" selection-start-column="8" selection-end-line="62" selection-end-column="9" />
               <folding>
                 <marker date="1575911546056" expanded="true" signature="6:187" ph="..." />
@@ -52,7 +37,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/ReturnToMenu.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="777">
+            <state relative-caret-position="752">
               <caret line="55" selection-start-line="55" selection-end-line="55" />
               <folding>
                 <marker date="1575911690059" expanded="false" signature="6:135" ph="..." />
@@ -71,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/UI/RadialAiNotes.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="82">
-              <caret line="94" column="14" selection-start-line="94" selection-start-column="14" selection-end-line="94" selection-end-column="14" />
+            <state relative-caret-position="851">
+              <caret line="115" column="37" lean-forward="true" selection-start-line="115" selection-start-column="37" selection-end-line="115" selection-end-column="37" />
               <folding>
                 <marker date="1575982340433" expanded="false" signature="6:171" ph="..." />
                 <marker date="1575982340433" expanded="true" signature="216:4014" ph="{...}" />
@@ -103,10 +88,9 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
+            <state relative-caret-position="688">
               <caret line="45" column="43" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
               <folding>
-                <marker date="1575904562405" expanded="false" signature="6:78" ph="..." />
                 <marker date="1575904562405" expanded="true" signature="125:11237" ph="{...}" />
                 <marker date="1575904562405" expanded="true" signature="1595:1758" ph="{...}" />
                 <marker date="1575904562405" expanded="true" signature="1670:1710" ph="{...}" />
@@ -168,8 +152,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Models/Coin/CollectCoin.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="30" column="8" lean-forward="true" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
+            <state relative-caret-position="402">
+              <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
               <folding>
                 <marker date="1575904562236" expanded="true" signature="6:127" ph="..." />
                 <marker date="1575904562236" expanded="true" signature="169:762" ph="{...}" />
@@ -181,11 +165,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerData.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="115" column="5" lean-forward="true" selection-start-line="115" selection-start-column="5" selection-end-line="115" selection-end-column="5" />
+            <state relative-caret-position="-1135">
+              <caret line="34" column="19" lean-forward="true" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
               <folding>
                 <marker date="1575982324552" expanded="false" signature="6:167" ph="..." />
                 <marker date="1575982324552" expanded="true" signature="208:3054" ph="{...}" />
@@ -256,12 +240,12 @@
       <pane id="SolutionExplorer">
         <option name="show-all-files" value="false" />
       </pane>
+      <pane id="AssemblyExplorer" />
+      <pane id="FileSystemExplorer" />
       <pane id="UnityExplorer">
         <option name="show-hidden-items" value="false" />
         <option name="show-project-names" value="true" />
       </pane>
-      <pane id="AssemblyExplorer" />
-      <pane id="FileSystemExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -321,11 +305,12 @@
       <workItem from="1575472744960" duration="486000" />
       <workItem from="1575910879914" duration="1095000" />
       <workItem from="1575980518955" duration="2114000" />
+      <workItem from="1576008509865" duration="219000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17837000" />
+    <option name="totallyTimeSpent" value="18056000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -339,7 +324,7 @@
   <component name="ToolWindowManager">
     <frame x="23" y="23" width="1345" height="829" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29163468" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29623944" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -378,7 +363,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/ReturnToMenu.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/UI/MenuControl.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
+        <state relative-caret-position="832">
           <caret line="62" column="9" selection-start-line="59" selection-start-column="8" selection-end-line="62" selection-end-column="9" />
           <folding>
             <marker date="1575911546056" expanded="true" signature="6:187" ph="..." />
@@ -398,7 +383,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/ReturnToMenu.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="777">
+        <state relative-caret-position="752">
           <caret line="55" selection-start-line="55" selection-end-line="55" />
           <folding>
             <marker date="1575911690059" expanded="false" signature="6:135" ph="..." />
@@ -418,10 +403,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
+        <state relative-caret-position="688">
           <caret line="45" column="43" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
           <folding>
-            <marker date="1575904562405" expanded="false" signature="6:78" ph="..." />
             <marker date="1575904562405" expanded="true" signature="125:11237" ph="{...}" />
             <marker date="1575904562405" expanded="true" signature="1595:1758" ph="{...}" />
             <marker date="1575904562405" expanded="true" signature="1670:1710" ph="{...}" />
@@ -479,10 +463,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/UI/RadialAiNotes.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="851">
+          <caret line="115" column="37" lean-forward="true" selection-start-line="115" selection-start-column="37" selection-end-line="115" selection-end-column="37" />
+          <folding>
+            <marker date="1575982340433" expanded="false" signature="6:171" ph="..." />
+            <marker date="1575982340433" expanded="true" signature="216:4014" ph="{...}" />
+            <marker date="1575982340433" expanded="true" signature="405:493" ph="/* public Animation state3; ... */" />
+            <marker date="1575982340433" expanded="true" signature="649:791" ph="/* player.GetComponent&lt;PlayerData&gt;().life = the pannel ... */" />
+            <marker date="1575982340433" expanded="true" signature="843:1178" ph="{...}" />
+            <marker date="1575982340433" expanded="true" signature="967:1163" ph="/* Image healthPanelImage = GetComponent&lt;Image&gt;(); ... */" />
+            <marker date="1575982340433" expanded="true" signature="1196:3258" ph="{...}" />
+            <marker date="1575982340433" expanded="true" signature="1203:1503" ph="/* displayMansNumb.text= &quot;Lives X&quot; + player.GetComponent&lt;PlayerData&gt;().mans.ToString(); ... */" />
+            <marker date="1575982340433" expanded="true" signature="1621:2037" ph="{...}" />
+            <marker date="1575982340433" expanded="true" signature="1662:1798" ph="/* code ... */" />
+            <marker date="1575982340433" expanded="true" signature="2155:2457" ph="{...}" />
+            <marker date="1575982340433" expanded="true" signature="2178:2252" ph="/* code ... */" />
+            <marker date="1575982340433" expanded="true" signature="2575:2866" ph="{...}" />
+            <marker date="1575982340433" expanded="true" signature="2598:2664" ph="/* code ... */" />
+            <marker date="1575982340433" expanded="true" signature="2923:3186" ph="{...}" />
+            <marker date="1575982340433" expanded="true" signature="2946:3176" ph="/* code ... */" />
+            <marker date="1575982340433" expanded="true" signature="3264:3858" ph="/* Radial Ui Life stuff ... */" />
+            <marker date="1575982340433" expanded="true" signature="3864:4012" ph="/* public Int health; ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Models/Coin/CollectCoin.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="30" column="8" lean-forward="true" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
+        <state relative-caret-position="402">
+          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
           <folding>
             <marker date="1575904562236" expanded="true" signature="6:127" ph="..." />
             <marker date="1575904562236" expanded="true" signature="169:762" ph="{...}" />
@@ -495,8 +506,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerData.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="115" column="5" lean-forward="true" selection-start-line="115" selection-start-column="5" selection-end-line="115" selection-end-column="5" />
+        <state relative-caret-position="-1135">
+          <caret line="34" column="19" lean-forward="true" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
           <folding>
             <marker date="1575982324552" expanded="false" signature="6:167" ph="..." />
             <marker date="1575982324552" expanded="true" signature="208:3054" ph="{...}" />
@@ -520,33 +531,6 @@
             <marker date="1575982324552" expanded="true" signature="2527:2559" ph="{...}" />
             <marker date="1575982324552" expanded="true" signature="2565:2905" ph="/* public void IfLifeZero() ... */" />
             <marker date="1575982324552" expanded="true" signature="2911:3047" ph="/* This is a script Taylor Can draw from ... */" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/UI/RadialAiNotes.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="94" column="14" selection-start-line="94" selection-start-column="14" selection-end-line="94" selection-end-column="14" />
-          <folding>
-            <marker date="1575982340433" expanded="false" signature="6:171" ph="..." />
-            <marker date="1575982340433" expanded="true" signature="216:4014" ph="{...}" />
-            <marker date="1575982340433" expanded="true" signature="405:493" ph="/* public Animation state3; ... */" />
-            <marker date="1575982340433" expanded="true" signature="649:791" ph="/* player.GetComponent&lt;PlayerData&gt;().life = the pannel ... */" />
-            <marker date="1575982340433" expanded="true" signature="843:1178" ph="{...}" />
-            <marker date="1575982340433" expanded="true" signature="967:1163" ph="/* Image healthPanelImage = GetComponent&lt;Image&gt;(); ... */" />
-            <marker date="1575982340433" expanded="true" signature="1196:3258" ph="{...}" />
-            <marker date="1575982340433" expanded="true" signature="1203:1503" ph="/* displayMansNumb.text= &quot;Lives X&quot; + player.GetComponent&lt;PlayerData&gt;().mans.ToString(); ... */" />
-            <marker date="1575982340433" expanded="true" signature="1621:2037" ph="{...}" />
-            <marker date="1575982340433" expanded="true" signature="1662:1798" ph="/* code ... */" />
-            <marker date="1575982340433" expanded="true" signature="2155:2457" ph="{...}" />
-            <marker date="1575982340433" expanded="true" signature="2178:2252" ph="/* code ... */" />
-            <marker date="1575982340433" expanded="true" signature="2575:2866" ph="{...}" />
-            <marker date="1575982340433" expanded="true" signature="2598:2664" ph="/* code ... */" />
-            <marker date="1575982340433" expanded="true" signature="2923:3186" ph="{...}" />
-            <marker date="1575982340433" expanded="true" signature="2946:3176" ph="/* code ... */" />
-            <marker date="1575982340433" expanded="true" signature="3264:3858" ph="/* Radial Ui Life stuff ... */" />
-            <marker date="1575982340433" expanded="true" signature="3864:4012" ph="/* public Int health; ... */" />
           </folding>
         </state>
       </provider>
