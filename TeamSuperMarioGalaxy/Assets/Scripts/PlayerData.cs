@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using UnityEditor;
 
 public class PlayerData : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class PlayerData : MonoBehaviour
     public bool invulnerable;
     public float invulnTime;
     public float flashMultiplier;
+    public bool mansDecrease = false;
+    //public bool mansDecreaseto2 = false;
 
     public Coroutine invulnRoutine;
 
@@ -111,14 +114,21 @@ public class PlayerData : MonoBehaviour
 
     /*public void IfLifeZero()
     {
-        mans--;
-        if (mans == 0)
+        //mansDecrease = false;
+        /*if (mansDecrease == false)
         {
-            SceneManager.LoadScene( )//Load the menu scene or a You died try again scene
+            mans= mans-1;
+            mansDecrease = true;
         }
-    }
+        
+        if (mans <= 0)
+        {
+            SceneManager.LoadScene("You Lose"); //Load the menu scene or a You died try again scene
+        }
+    }*/
+
     //This is a script Taylor Can draw from
     //so ui can change either text or number of playerheads on screen
     //they aren't sure yet
-    */
+    
 }

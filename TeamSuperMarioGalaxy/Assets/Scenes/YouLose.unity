@@ -1096,6 +1096,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Return: {fileID: 885108160}
   Sourceend: {fileID: 1662437808}
-  Clippy: {fileID: 8300000, guid: eed13286b181f4938afe4c305527e4b3, type: 3}
+  Clippy: {fileID: 8300000, guid: b965bec05a0e14a198b6d37ba8c20186, type: 3}
   soundTimer: 0
   startedPlaying: 0
