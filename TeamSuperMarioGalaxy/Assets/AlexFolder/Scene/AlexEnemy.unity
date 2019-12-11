@@ -1198,6 +1198,11 @@ PrefabInstance:
       propertyPath: wayPoints.Array.data[4]
       value: 
       objectReference: {fileID: 2107687705}
+    - target: {fileID: 5107061008637353177, guid: f748d0bf1551f53479000cc5b42b0925,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 7663aeb8022bcc74cbbeeacfb5d99c0b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f748d0bf1551f53479000cc5b42b0925, type: 3}
 --- !u!1001 &3447569080924384872
@@ -1207,6 +1212,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2939560378492800473, guid: 4b0bbc5fc92338c488731b0abdea2731,
+        type: 3}
+      propertyPath: m_Name
+      value: Piranha Plant
+      objectReference: {fileID: 0}
     - target: {fileID: 3893414812859499993, guid: 4b0bbc5fc92338c488731b0abdea2731,
         type: 3}
       propertyPath: targetObj
@@ -1217,11 +1227,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1814913245}
-    - target: {fileID: 2939560378492800473, guid: 4b0bbc5fc92338c488731b0abdea2731,
-        type: 3}
-      propertyPath: m_Name
-      value: Piranha Plant
-      objectReference: {fileID: 0}
     - target: {fileID: 8505708656305746816, guid: 4b0bbc5fc92338c488731b0abdea2731,
         type: 3}
       propertyPath: m_LocalPosition.x
