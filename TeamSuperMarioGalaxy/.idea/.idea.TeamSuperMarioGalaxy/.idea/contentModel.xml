@@ -25,7 +25,9 @@
         <e p="Scripts" t="Include">
           <e p="Blit.cs" t="Include" />
           <e p="BlitPass.cs" t="Include" />
+          <e p="GeneralOrientationHandler.cs" t="Include" />
           <e p="GenericCameraFollow.cs" t="Include" />
+          <e p="LookForSign.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
           <e p="PlayerData.cs" t="Include" />
           <e p="ReturnToMenu.cs" t="Include" />

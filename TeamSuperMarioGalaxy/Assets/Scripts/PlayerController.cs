@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
     public enum JumpState { ON_GROUND, JUMPING, FALLING };
     public JumpState jumpState;
     public AnimationCurve jumpCurve;
+    //public AudioSource jumpSource;
+    //public AudioClip jumpSound;
 
     [Header("Down Raycasting")]
     public Vector3 raycastOriginOffset;
@@ -160,6 +162,7 @@ public class PlayerController : MonoBehaviour
         // If you're on the ground and press the spacebar you start jumping
         if (jumpState == JumpState.ON_GROUND && Input.GetKeyDown(KeyCode.Space) && (state == State.NORMAL || state == State.SPINNING))
         {
+            //jumpSource.PlayOneShot(jumpSound);
             anim.SetBool("Jump", true);
             jumpTimer = 0f;
             jumpState = JumpState.JUMPING;
