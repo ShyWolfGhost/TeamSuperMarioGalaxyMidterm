@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using UnityEditor;
 
 public class PlayerData : MonoBehaviour
 {
@@ -17,14 +18,19 @@ public class PlayerData : MonoBehaviour
     public bool invulnerable;
     public float invulnTime;
     public float flashMultiplier;
+    public bool mansDecrease = false;
 
     public Coroutine invulnRoutine;
 
     public TextMeshProUGUI coinsText, livesText;
 
+    public static int mansToStartWith = 3;
+
     void Start()
     {
         cont = GetComponent<PlayerController>();
+
+        mans = mansToStartWith;
     }
 
     void Update()
@@ -76,6 +82,22 @@ public class PlayerData : MonoBehaviour
         else if(collision.collider.tag == "Enemy" && !invulnerable)
         {
             life--;
+
+            if(life <= 0)
+            { 
+                mansToStartWith--;
+                Debug.Log("Lost a life. Current lives now: " + mansToStartWith);
+                if(mansToStartWith <= 0)
+                {
+                    Debug.Log("No more lives remaining." + " Player loses.");
+                    SceneManager.LoadScene(2);
+                }
+                else
+                {
+                    Debug.Log("Lives remaining. Reloading scene.");
+                    SceneManager.LoadScene(1);
+                }
+            }
             /*if (life == 0)
             {
                 IfLifeZero();  
@@ -106,6 +128,7 @@ public class PlayerData : MonoBehaviour
         {
             coins -= 100;
             mans++;
+            mansToStartWith++;
             //if player gets 100 coins 1 up
         }
     }
@@ -116,14 +139,21 @@ public class PlayerData : MonoBehaviour
 
     /*public void IfLifeZero()
     {
-        mans--;
-        if (mans == 0)
+        //mansDecrease = false;
+        /*if (mansDecrease == false)
         {
-            SceneManager.LoadScene( )//Load the menu scene or a You died try again scene
+            mans= mans-1;
+            mansDecrease = true;
         }
-    }
+        
+        if (mans <= 0)
+        {
+            SceneManager.LoadScene("You Lose"); //Load the menu scene or a You died try again scene
+        }
+    }*/
+
     //This is a script Taylor Can draw from
     //so ui can change either text or number of playerheads on screen
     //they aren't sure yet
-    */
+    
 }
