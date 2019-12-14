@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     [Header("Jump")]
     public bool onGround;
     public float groundCheckDist;
+    public float minJumpTime;
     public float maxJumpTime;
     public float jumpTimer;
     public enum JumpState { ON_GROUND, JUMPING, FALLING };
@@ -163,6 +164,7 @@ public class PlayerController : MonoBehaviour
             jumpTimer = 0f;
             jumpState = JumpState.JUMPING;
         }
+        // If you are jumping and you are hurt you start falling
         else if (jumpState == JumpState.JUMPING && state == State.HURT)
         {
             anim.SetBool("Jump", true);
@@ -170,7 +172,7 @@ public class PlayerController : MonoBehaviour
             fallTime = 0f;
         }
         // If at any point you are jumping and stop holding space you start falling
-        else if (jumpState == JumpState.JUMPING && !Input.GetKey(KeyCode.Space))
+        else if (jumpState == JumpState.JUMPING && !Input.GetKey(KeyCode.Space) && jumpTimer > minJumpTime)
         {
             anim.SetBool("Jump", true);
             jumpState = JumpState.FALLING;
@@ -188,12 +190,14 @@ public class PlayerController : MonoBehaviour
         {
             jumpTimer += Time.deltaTime;
         }
+        // If you're not on the ground and you're stat is on the ground make you be on the ground
         else if (!onGround && jumpState == JumpState.ON_GROUND)
         {
             anim.SetBool("Jump", true);
             jumpState = JumpState.FALLING;
             fallTime = 0f;
         }
+        // If you're on the ground remember that you're on the ground
         else if (onGround)
         {
             anim.SetBool("Jump", false);

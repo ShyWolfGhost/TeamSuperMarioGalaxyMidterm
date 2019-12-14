@@ -22,6 +22,7 @@ public class RadialAiNotes : MonoBehaviour
     //public Animation state1;
     public Animator healthAnimator;
     //public Image playerHead;
+    public TextMeshProUGUI displayMansNumb;
 
 
     private int lastCheckHealth;
@@ -51,6 +52,9 @@ public class RadialAiNotes : MonoBehaviour
     }
     void Update()
     {
+//displayMansNumb.text= "Lives X" + player.GetComponent<PlayerData>().mans.ToString();
+//The Mans text isn't updating when placed here
+        
         //ON player collide with enemy WHICH I WON'T BE ABLE TO ACCESS HEALTH GOES DOWN 1
         
         //displayHealthNumb.text = healthNumb.ToString();
@@ -62,7 +66,6 @@ public class RadialAiNotes : MonoBehaviour
                      //healthPanelImage.image.fuck
                      healthAnimator.SetTrigger("GoToState3");
                      displayHealthNumb.text = "3";
-                     
 
                  }
         if (player.GetComponent<PlayerData>().life == 2 && player.GetComponent<PlayerData>().life != lastCheckHealth)
@@ -72,7 +75,7 @@ public class RadialAiNotes : MonoBehaviour
             //healthPanelImage.image.fi
             healthAnimator.SetTrigger("GoToState2");
             displayHealthNumb.text = "2";
-            
+            //displayMansNumb.text= "Lives X" + player.GetComponent<PlayerData>().mans.ToString();
 
         }
         if (player.GetComponent<PlayerData>().life == 1 && player.GetComponent<PlayerData>().life != lastCheckHealth)
@@ -88,6 +91,7 @@ public class RadialAiNotes : MonoBehaviour
             //code
             //reset the value to 3 than cause a loss of mario.
             //player.GetComponent<PlayerData>().IfLifeZero();
+            //displayMansNumb.text= "Lives X" + player.GetComponent<PlayerData>().mans.ToString();
         }
         lastCheckHealth = player.GetComponent<PlayerData>().life;
     }
