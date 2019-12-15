@@ -56,6 +56,8 @@ public class PlayerController : MonoBehaviour
 
     private List<Vector3> ups;
     private int directionMemory = 20;
+
+    public bool canMove = true;
     private Vector3 avgUp()
     {
         Vector3 a = new Vector3();
@@ -78,37 +80,47 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        ForwardInputs();
-
-        TurningInputs();
-
-        JumpInput();
-
-        if (forwardTime > 0)
+        if (canMove)
         {
-            anim.SetFloat("ForwardSpeed", forwardTime / timeToMaxForward);
-        }
-        else if(forwardTime < 0)
-        {
-            anim.SetFloat("ForwardSpeed", forwardTime / timeToMaxBackward);
-        }
-        else
-        {
-            anim.SetFloat("ForwardSpeed", 0f);
+            ForwardInputs();
+
+            TurningInputs();
+
+            JumpInput();
+
+            if (forwardTime > 0)
+            {
+                anim.SetFloat("ForwardSpeed", forwardTime / timeToMaxForward);
+            }
+            else if (forwardTime < 0)
+            {
+                anim.SetFloat("ForwardSpeed", forwardTime / timeToMaxBackward);
+            }
+            else
+            {
+                anim.SetFloat("ForwardSpeed", 0f);
+            }
         }
     }
 
     private void FixedUpdate()
     {
-        FindUp();
-
-        Gravity();
-
-        Movement();
-
-        if (state == State.HURT)
+        if (canMove)
         {
-            HurtPush();
+            FindUp();
+
+            Gravity();
+
+            Movement();
+
+            if (state == State.HURT)
+            {
+                HurtPush();
+            }
+        }
+        else
+        {
+            Debug.Log("Stopped Moving");
         }
     }
 
@@ -128,7 +140,7 @@ public class PlayerController : MonoBehaviour
         state = State.NORMAL;
     }
 
-    void VertMove()
+    public void VertMove()
     {
         // Reset all transform data
         moveTarget.localPosition = Vector3.zero;
@@ -385,5 +397,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("TeleportDestination"))
+        {
+            Debug.Log("turn");
+            Quaternion destinationRotation = Quaternion.LookRotation(other.transform.forward, other.transform.up);
+            this.transform.localRotation = destinationRotation;
+        }
+    }
 }
