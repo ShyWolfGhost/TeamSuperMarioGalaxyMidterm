@@ -28,7 +28,7 @@ public class TriggerTeleport : MonoBehaviour
             playerController.canMove = false;
             playerController.VertMove();
             other.transform.position = TeleportDestination.transform.position;
-            //other.transform.eulerAngles = new Vector3(0,0,0);
+            other.transform.eulerAngles = new Vector3(0,0,0);
             if (boxWorld)
             {
                 Show();
