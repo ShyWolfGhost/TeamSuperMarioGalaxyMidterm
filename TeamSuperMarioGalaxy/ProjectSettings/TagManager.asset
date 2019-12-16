@@ -9,6 +9,8 @@ TagManager:
   - Coin
   - Starbit
   - Signpost
+  - TeleportDestination
+  - TriggerTeleport
   layers:
   - Default
   - TransparentFX
@@ -20,7 +22,7 @@ TagManager:
   - 
   - PostProcessing
   - AI Waypoints
-  - 
+  - BOX
   - 
   - 
   - 
